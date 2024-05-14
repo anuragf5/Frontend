@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box{
+            background-color: aqua;
+            font-size: 24px;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            display: inline-block;
+        }
+
+        .box_1{
+            height: 100px;
+            width: 100px;
+            background-color: aqua;
+            position: relative;
+            display: inline-block;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        #r_2{
+            top: 50px;
+            background-color: antiquewhite;
+        }
+
+        .box_2{
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+            position: absolute;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        #ab_3{
+            left: 600px;
+        }
+
+        #ab_2{
+            right: 10px
+        }
+
+        #ab_1{
+            left: 10px;
+        }
+
+        .box_3{
+            height: 100px;
+            width: 100px;
+            background-color: brown;
+            font-size: 24px;
+            text-align: center;
+            position: fixed;
+        }
+
+        body{
+            height: 3000px;
+        }
+
+        .box_4{
+            top: 0px;
+            height: 100px;
+            width: 100px;
+            background-color: cadetblue;
+            font-size: 24px;
+            text-align: center;
+            position: sticky;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Static -->
+    <div class="box">Static Position</div>
+    <div class="box">Static Position</div>
+    <div class="box">Static Position</div>
+
+    <br><br><br>
+    <!-- Relative [Relative to itself position] [use only left, right, top, bottom] -->
+    <div class="box_1">1</div>
+    <div class="box_1" id="r_2">2</div>
+    <div class="box_1">3</div>
+
+    <br><br><br>
+    <!-- Absolute [Relative to screen position or parent] -->
+    <div class="box_2" id="ab_1">1</div>
+    <div class="box_2" id="ab_2">2</div>
+    <div class="box_2" id="ab_3">3</div>
+
+    <br><br><br><br><br><br><br><br><br>
+    <!-- Fixed [Fixed content on website even on scrolling] -->
+    <div class="box_3">1</div>
+
+    <br><br><br><br><br><br><br><br><br>
+    <!-- Sticky [Sticks on top] -->
+    <div class="box_4">1</div>
+    <div class="box_4">2</div>
+</body>
+
+</html>
