@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            height: 100vh;
+            display: grid;
+            grid-template-rows: 2fr 8fr;
+            grid-gap: 1em;
+        }
+
+        .box-1 {
+            background-color: burlywood;
+            border-radius: 1rem;
+        }
+
+        .box-2 {
+            display: grid;
+            grid-template-columns: 2fr 8fr;
+            grid-gap: 1em;
+        }
+
+        .left {
+            display: grid;
+            grid-template-rows: 4fr 6fr;
+            grid-gap: 1em;
+        }
+
+        .item-left {
+            border-radius: 1rem;
+        }
+
+        #item-left-1 {
+            background-color: orange;
+        }
+
+        #item-left-2 {
+            background-color: burlywood;
+        }
+
+        .right {
+            display: grid;
+            grid-template-rows: 8fr 2fr;
+            grid-gap: 1em;
+        }
+
+        .upper {
+            display: grid;
+            grid-template-columns: 7fr 3fr;
+            grid-gap: 1em;
+        }
+
+        .upper-left {
+            background-color: burlywood;
+            border-radius: 1rem;
+        }
+
+        .upper-right {
+            display: grid;
+            grid-template-rows: 2fr 2fr;
+            grid-gap: 1em;
+        }
+
+        .upper-right-box {
+            border-radius: 1rem;
+            grid-gap: 1em;
+        }
+
+        #upper-right-box-1 {
+            background-color: orange;
+        }
+
+        .lower {
+            background-color: burlywood;
+            border-radius: 1rem;
+            grid-gap: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="box-1">
+        </div>
+
+        <div class="box-2">
+
+            <div class="left">
+
+                <div class="item-left" id="item-left-1"></div>
+                <div class="item-left" id="item-left-2"></div>
+
+            </div>
+
+            <div class="right">
+
+                <div class="upper">
+
+                    <div class="upper-left">
+
+                    </div>
+
+                    <div class="upper-right">
+
+                        <div class="upper-right-box" id="upper-right-box-1"></div>
+                        <div class="upper-right-box" id="upper-right-box-1"></div>
+
+                    </div>
+
+                </div>
+
+                <div class="lower">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
