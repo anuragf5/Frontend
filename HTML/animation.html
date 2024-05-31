@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .container-left {
+            height: 100px;
+            width: 100px;
+            animation-name: left;
+            animation-duration: 12s;
+            animation-timing-function: ease-in;
+            position: relative;
+            background-color: red;
+        }
+
+        .container-right {
+            height: 100px;
+            width: 100px;
+            animation-name: right;
+            animation-duration: 12s;
+            animation-timing-function: ease-out;
+            position: relative;
+            background-color: blue;
+        }
+
+        @keyframes left {
+
+            from {
+                top: 0px;
+                left: 0px;
+                height: 0px;
+                width: 0px;
+            }
+
+            to {
+                top: 500px;
+                left: 500px;
+                height: 400px;
+                width: 400px;
+            }
+        }
+
+        @keyframes right {
+
+            from {
+                top: 0px;
+                right: 0px;
+                height: 0px;
+                width: 0px;
+            }
+
+            to {
+                top: 500px;
+                right: 500px;
+                height: 400px;
+                width: 400px;
+            }
+        }
+
+        .container_two {
+            height: 100px;
+            width: 100px;
+            background-color: aqua;
+            animation-name: box;
+            animation-duration: 12s;
+            position: absolute;
+        }
+
+        @keyframes box {
+            0% {
+                top: 0px;
+                left: 0px;
+            }
+
+            25% {
+                top: 0px;
+                left: 500px;
+            }
+
+            50% {
+                top: 500px;
+                left: 500px;
+            }
+
+            75% {
+                top: 500px;
+                left: 0px;
+            }
+
+            100% {
+                top: 0px;
+                left: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- <div class="container">
+
+        <div class="container-left">EASE - IN</div>
+        <div class="container-right">EASE - OUT</div>
+    </div> -->
+
+    <div class="container_two"></div>
+</body>
+
+</html>
