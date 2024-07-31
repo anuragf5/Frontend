@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            padding-top: .5rem;
+            padding-bottom: .5rem;
+        }
+
+        .navbar_container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 18px;
+            border-bottom: 1px solid #F7F7F7;
+        }
+
+        .image_container {
+            width: 360px;
+            padding: 9px;
+        }
+
+        .searchbox_container {
+            width: 405px;
+            padding: 9px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        form {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            border: 1px solid #adb5bd;
+            border-radius: 0.25rem;
+            padding: 1.25rem;
+        }
+
+        .searchbox_container input {
+            width: 100%;
+            border: none;
+            color: #908F8D;
+            font-size: 1rem;
+            font-weight: 400;
+            font-family: 'Montserrat', sans-serif;
+            line-height: normal;
+            letter-spacing: 0.02125rem;
+            background-color: transparent;
+        }
+
+        .right_container {
+            width: 405px;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            flex-wrap: wrap;
+        }
+
+        .phone_container {
+            padding: 9px;
+            margin-right: 48px;
+        }
+
+        .phone_container p {
+            text-align: right;
+            font-size: 1.25rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            color: rgba(33, 37, 41, 0.75);
+            letter-spacing: 0.01625rem;
+        }
+
+        .phone_container h5 {
+            text-align: right;
+            font-size: 1rem;
+            font-family: 'Chilanka', cursive;
+            font-weight: 400;
+            letter-spacing: 0.01625rem;
+            color: #41403E;
+        }
+
+        .email_container p {
+            text-align: right;
+            font-size: 1.25rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            color: rgba(33, 37, 41, 0.75);
+            letter-spacing: 0.01625rem;
+        }
+
+        .email_container h5 {
+            text-align: right;
+            font-size: 1rem;
+            font-family: 'Chilanka', cursive;
+            font-weight: 400;
+            color: #41403E;
+            letter-spacing: 0.01625rem;
+        }
+
+        .secondary_navbar_container {
+            padding-top: 6px;
+            padding-bottom: 6px;
+            padding-left: 9px;
+            padding-right: 9px;
+        }
+
+        .s_navbar_container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding-top: 6px;
+            padding-bottom: 6px;
+        }
+
+        .left {
+            width: 360px;
+        }
+
+        .left select {
+            border: none;
+            font-size: 12px;
+            font-family: 'Chilanka', cursive;
+            margin: 0px 36px 0px 0px;
+        }
+
+        .middle {
+            width: 465px;
+        }
+
+        .middle a {
+            padding: 6px;
+            text-decoration: none;
+            margin-right: 16px;
+        }
+
+        .home {
+            color: #dead6f;
+            font-size: 12px;
+            font-family: 'Chilanka', cursive;
+            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+        }
+
+        .pages,
+        .shop,
+        .blog,
+        .contact,
+        .others {
+            color: #000000A6;
+            font-size: 12px;
+            font-family: 'Chilanka', cursive;
+        }
+
+        .getpro {
+            color: #000000A6;
+            font-size: 12px;
+            font-family: 'Chilanka', cursive;
+            font-weight: 600;
+        }
+
+        .pages:hover {
+            color: #dead6f;
+            font-size: 12px;
+            font-family: 'Chilanka', cursive;
+            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+        }
+
+        .shop:hover {
+            color: #dead6f;
+            font-size: 12px;
+            font-family: 'Chilanka', cursive;
+            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+        }
+
+        .blog:hover {
+            color: #dead6f;
+            font-size: 12px;
+            font-family: 'Chilanka', cursive;
+            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+        }
+
+        .contact:hover {
+            color: #dead6f;
+            font-size: 12px;
+            font-family: 'Chilanka', cursive;
+            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+        }
+
+        .others:hover {
+            color: #dead6f;
+            font-size: 12px;
+            font-family: 'Chilanka', cursive;
+            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+        }
+
+        .getpro {
+            color: #212529;
+            font-size: 12px;
+            font-family: 'Chilanka', cursive;
+        }
+
+        .right {
+            width: 345px;
+            text-align: right;
+            margin-left: 16px;
+            margin-right: 16px;
+        }
+
+        .right i {
+            font-size: 16px;
+            margin-left: 16px;
+            margin-right: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="navbar_container">
+
+            <div class="image_container">
+
+                <img src="Images/logo (1).png" alt="">
+
+            </div>
+
+            <div class="searchbox_container">
+
+                <form action="">
+
+                    <input type="search" name="" id="" placeholder="Search for more than 10,000 products">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                </form>
+
+
+
+            </div>
+
+            <div class="right_container">
+
+                <div class="phone_container">
+
+                    <p>Phone</p>
+
+                    <h5>+980-34984089</h5>
+
+                </div>
+
+                <div class="email_container">
+
+                    <p>Email</p>
+
+                    <h5>Waggy@gmail.com</h5>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="secondary_navbar_container">
+
+            <div class="s_navbar_container">
+
+                <div class="left">
+
+                    <select name="" id="">
+                        <option value="">Select by category</option>
+                        <option value="">Clothes</option>
+                        <option value="">Foods</option>
+                        <option value="">Toys</option>
+                    </select>
+
+                </div>
+
+                <div class="middle">
+
+                    <a href="" class="home">Home</a>
+
+                    <a href="" class="pages">Pages</a>
+
+                    <a href="" class="shop">Shop</a>
+
+                    <a href="" class="blog">Blog</a>
+
+                    <a href="" class="contact">Contact</a>
+
+                    <a href="" class="others">Others</a>
+
+                    <a href="" class="getpro">GET PRO</a>
+                </div>
+
+                <div class="right">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    <i class="fa-solid fa-heart"></i>
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
