@@ -29,3 +29,11 @@ document.getElementById("product_checkout").onclick = function () {
 document.getElementById("product_details").onclick = function () {
   window.open("product_detail_page.html", "_self");
 };
+
+document.getElementById("login").onclick = function () {
+  window.open("login.html", "_self");
+};
+
+document.getElementById("signup").onclick = function () {
+  window.open("signup.html", "_self");
+};
