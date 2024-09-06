@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Swatch</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: darkviolet;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .one {
+            height: 350px;
+            width: 70px;
+            background-color: red;
+            position: absolute;
+            transform-origin: center 90%;
+            display: inline-block;
+            backface-visibility: hidden;
+            margin-left: -35px;
+            border-radius: 4px;
+            box-shadow: 1px 1px 5px white;
+            animation-name: ones;
+            animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            z-index: 7;
+        }
+
+        @keyframes ones {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(-75deg);
+            }
+        }
+
+        .two {
+            height: 350px;
+            width: 70px;
+            background-color: orange;
+            position: absolute;
+            transform-origin: center 90%;
+            display: inline-block;
+            backface-visibility: hidden;
+            margin-left: -35px;
+            border-radius: 4px;
+            box-shadow: 1px 1px 5px white;
+            animation-name: twos;
+            animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            z-index: 6;
+        }
+
+        @keyframes twos {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(-50deg);
+            }
+        }
+
+        .three {
+            height: 350px;
+            width: 70px;
+            background-color: yellow;
+            position: absolute;
+            transform-origin: center 90%;
+            display: inline-block;
+            backface-visibility: hidden;
+            margin-left: -35px;
+            border-radius: 4px;
+            box-shadow: 1px 1px 5px white;
+            animation-name: three;
+            animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            z-index: 5;
+        }
+
+        @keyframes three {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(-25deg);
+            }
+        }
+
+        .four {
+            height: 350px;
+            width: 70px;
+            background-color: green;
+            position: absolute;
+            transform-origin: center 90%;
+            display: inline-block;
+            backface-visibility: hidden;
+            margin-left: -35px;
+            /* transform: rotate(25deg); */
+            border-radius: 4px;
+            box-shadow: 1px 1px 5px white;
+            animation-name: four;
+            animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            z-index: 4;
+        }
+
+        @keyframes four {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(0deg);
+            }
+        }
+
+        .five {
+            height: 350px;
+            width: 70px;
+            background-color: blue;
+            position: absolute;
+            transform-origin: center 90%;
+            display: inline-block;
+            backface-visibility: hidden;
+            margin-left: -35px;
+            /* transform: rotate(50deg); */
+            border-radius: 4px;
+            box-shadow: 1px 1px 5px white;
+            animation-name: five;
+            animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            z-index: 3;
+        }
+
+        @keyframes five {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(25deg);
+            }
+        }
+
+        .six {
+            height: 350px;
+            width: 70px;
+            background-color: indigo;
+            position: absolute;
+            transform-origin: center 90%;
+            display: inline-block;
+            backface-visibility: hidden;
+            margin-left: -35px;
+            /* transform: rotate(25deg); */
+            border-radius: 4px;
+            box-shadow: 1px 1px 5px white;
+            animation-name: six;
+            animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            z-index: 2;
+        }
+
+        @keyframes six {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(50deg);
+            }
+        }
+
+        .seven {
+            height: 350px;
+            width: 70px;
+            background-color: violet;
+            position: absolute;
+            transform-origin: center 90%;
+            display: inline-block;
+            backface-visibility: hidden;
+            margin-left: -35px;
+            /* transform: rotate(25deg); */
+            border-radius: 4px;
+            box-shadow: 1px 1px 5px white;
+            animation-name: seven;
+            animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            z-index: 1;
+        }
+
+        @keyframes seven {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(75deg);
+            }
+        }
+
+        .hole {
+            height: 16px;
+            width: 16px;
+            border-radius: 100%;
+            background-color: white;
+            z-index: 8;
+            margin-left: -35px;
+            position: absolute;
+            display: inline-block;
+            bottom: 200px;
+            box-shadow: 1px 1px black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <div class="four"></div>
+        <div class="five"></div>
+        <div class="six"></div>
+        <div class="seven"></div>
+        <div class="hole"></div>
+    </div>
+</body>
+
+</html>
