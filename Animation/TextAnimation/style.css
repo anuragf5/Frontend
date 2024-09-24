@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.glow-text {
+    position: relative;
+    color: #222;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.glow-text:hover {
+    transform: scale(4);
+    text-shadow: 0 0 20px rgb(0, 255, 98), 0 0 30px rgb(0, 255, 98);
+    color: #333;
+}
